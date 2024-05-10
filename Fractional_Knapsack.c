@@ -23,7 +23,7 @@ void knapsack(int n, float weight[], float profit[], float capacity)
 
    tp = tp + (x[i] * profit[i]);
 
-   printf("\nThe result vector is:- ");
+   printf("\nThe result matrix is:- ");
    for (i = 0; i < n; i++)
       printf("%f\t", x[i]);
 
