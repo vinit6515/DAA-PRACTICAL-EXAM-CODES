@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<conio.h>
-
 void FloydWarshall(int n,int graph [][n]){
     int matrix [n][n];
     int i , j , k;
@@ -10,18 +9,15 @@ void FloydWarshall(int n,int graph [][n]){
         {
             matrix[i][j]= graph[i][j];
         }
-        
     }
     for(k=0;k<n;k++){
         for ( i = 0; i < n; i++)
         {
             for(j=0;j<n;j++){
                 if(matrix[i][j]>matrix[i][k]+matrix[k][j])
-                matrix[i][j]=matrix[i][k]+matrix[k][j];
-                
+                matrix[i][j]=matrix[i][k]+matrix[k][j];           
             }
         }
-        
     }
     for ( i = 0; i <n; i++)
     {
@@ -31,8 +27,6 @@ void FloydWarshall(int n,int graph [][n]){
         }
             printf("\n");
     }
-    
-    
 }
 void main(){
 int n,i,j;
@@ -40,7 +34,6 @@ printf("\nEnter number of vertices:");
 scanf("%d",&n);
 int graph[n][n];
 printf("\nEnter the cost adjacency matrix:");
-
 for ( i = 0; i < n; i++)
 {
     for(j=0;j<n;j++){
@@ -48,7 +41,4 @@ for ( i = 0; i < n; i++)
     }
 }
 FloydWarshall(n,graph);
-
-
-
 }

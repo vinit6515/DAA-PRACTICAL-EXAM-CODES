@@ -12,8 +12,6 @@ void ActivitySelection(int start [], int finish [],int n){
         }
     }
     printf("\nThe total number oof activities taking place are %d", count);
-    
-
 }
 void main(){
     int start[100], finish[100], n;

@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<conio.h>
-
 int MatrixChainOrder(int arr[], int i , int j){
     if(i==j){
         return 0;
@@ -11,12 +10,10 @@ int MatrixChainOrder(int arr[], int i , int j){
         if (min>count)
         {
             min = count;
-        }
-        
+        }       
     }
     return min;
 }
-
 void main(){
     int arr[100], n ;
     printf("\nEnter the number of Matrices:");
@@ -26,6 +23,5 @@ void main(){
     {
         scanf("%d",&arr[i]);
     }
-    printf("\nThe minimum number of calculations required are : %d ", MatrixChainOrder(arr, 1,n));
-    
+    printf("\nThe minimum number of calculations required are : %d ", MatrixChainOrder(arr, 1,n));  
 }
